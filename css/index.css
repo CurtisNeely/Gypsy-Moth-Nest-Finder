@@ -1,0 +1,36 @@
+body{
+	font-family: arial;
+}
+			
+#title{
+	text-align: center;
+}
+
+#eggFilter{
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+#eggFilter button{
+	font-size: 15px;
+	padding: 3px;
+	cursor: pointer;
+}
+			
+#mothMap{
+	margin: auto;
+	width: 700px;
+	height: 350px;
+}
+			
+#report{
+	margin: auto;
+	width: 600px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#report h3{
+	text-align: center;
+}
+
