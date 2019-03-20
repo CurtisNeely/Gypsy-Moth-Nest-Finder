@@ -4,9 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Gypsy Moth Egg Finder</title>
+		
 		<link href ="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="css/responsive.css">
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		
 		<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=ArGwMc98hvTfTcE16_Kvr0cDvs-SNl8xI_5nwocd7LQDb5lmB2ThCDmeDLLWS4zz'></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -18,7 +21,7 @@
 	<body onload='loadMap();'>
 	
 		<div id = "title">
-			<h1> Gypsy Moth Egg Finder </h1>
+			<h1> Gypsy Moth Nest Finder </h1>
 		</div>
 		
 		<div id= "eggFilter">
@@ -33,7 +36,7 @@
 		</div>
 		
 		<div id = "report">
-			<h3> Report a Cluster </h3>
+			<h3 id="reportLabel"> Report a Cluster </h3>
 			
 			<form>
 				<div class="form-group">
@@ -45,7 +48,8 @@
 					<input id="userClosestRoad" type="text" class="form-control">
 				</div>
 
-				<button type="button" onclick = "getGeoLocationThenReport()" class="btn btn-primary center-block">Submit with Geoloaction</button>
+				<button type="button" onclick = "getGeoLocationThenReport()" class=" btn btn-primary center-block"><i id="reportIcon" class="fas fa-bug"></i>   Submit with Geoloaction</button>
+				
 			</form>
 		</div>
 		

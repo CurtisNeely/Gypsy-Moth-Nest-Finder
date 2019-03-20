@@ -119,7 +119,8 @@ function clearMap(){
 }
 
 function getGeoLocationThenReport(){
-	console.log("getGeo");
+	
+	changeButtonIconTo('load');
 
 	var userTree = document.getElementById("userTreeType").value;
 	var userRoad = document.getElementById("userClosestRoad").value;
@@ -137,6 +138,9 @@ function getGeoLocationThenReport(){
 	}
 	
 	function geoLocationError(error){
+		
+		changeButtonIconTo('x');
+		
 		switch(error.code) {
 			case error.PERMISSION_DENIED:
 				console.log("User denied the request for Geolocation. Default values used");
@@ -173,8 +177,37 @@ function reportEggCluster(userTree, userRoad, userLat, userLong){
 			"long":$long
 		}, function(data){
 			console.log(data);
+
+			changeButtonIconTo('check');
+			
+			loadMothPins('userReported');
 		});
 	});
+}
+
+function changeButtonIconTo(className){
+	
+	if(className === 'check'){
+		
+		document.getElementById("reportIcon").className = "far fa-check-circle";
+		
+	}else if(className === 'bug'){
+		
+		document.getElementById("reportIcon").className = "fas fa-bug";
+		
+	}else if(className === 'load'){
+		
+		document.getElementById("reportIcon").className = "fa fa-spinner fa-pulse";
+		
+	}else if(className === 'x'){
+		
+		document.getElementById("reportIcon").className = "far fa-times-circle";
+		
+	}else{
+		
+		console.log("Something went wrong with changing icons");
+	}
+	
 }
 
 eggData = 
