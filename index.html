@@ -1,0 +1,58 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Gypsy Moth Egg Finder</title>
+		
+		<link href ="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/responsive.css">
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		
+		<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=ArGwMc98hvTfTcE16_Kvr0cDvs-SNl8xI_5nwocd7LQDb5lmB2ThCDmeDLLWS4zz'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+		<script type='text/javascript' src ='js/gypsyMap.js'></script>
+		
+	</head>
+
+	<body onload='loadMap();'>
+	
+		<div id = "title">
+			<h1> Gypsy Moth Nest Finder </h1>
+		</div>
+		
+		<div id= "eggFilter">
+			<button onclick="loadMothPins('all')" style = "background-color: lightgrey">All</button>
+			<button onclick="loadMothPins('severe')" style= "background-color: lightsalmon">Severe</button>
+			<button onclick="loadMothPins('moderate')" style= "background-color: khaki">Moderate</button>
+			<button onclick="loadMothPins('low')" style= "background-color: lightgreen">Low</button>
+			<button onclick="loadMothPins('userReported')" style= "background-color: lightSkyBlue">User Reported</button>
+		</div>
+		
+		<div id= "mothMap">
+		</div>
+		
+		<div id = "report">
+			<h3 id="reportLabel"> Report a Cluster </h3>
+			
+			<form>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Type of Tree</label>
+					<input id="userTreeType" type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Closest Road</label>
+					<input id="userClosestRoad" type="text" class="form-control">
+				</div>
+
+				<button type="button" onclick = "getGeoLocationThenReport()" class=" btn btn-primary center-block"><i id="reportIcon" class="fas fa-bug"></i>   Submit with Geoloaction</button>
+				
+			</form>
+		</div>
+		
+	</body>
+	
+</html>
