@@ -1,0 +1,7 @@
+[1]'Submit with Geolocation' Button now includes icons that change during the ajax call. Making the user feel like something is happening when the button is clicked
+
+[2]The pushpins on the map now have info boxes with information on tree & species of each nest
+
+***Note: the user reported pins don't have info boxes as I have no way of filtering inappropriate records (This project is on my resume)*****
+
+[3] Hovering over the filter buttons (All, Severe, Moderate, Low, User Reported) now displays information on how the pins on the map are being filtered. Eggs/HA

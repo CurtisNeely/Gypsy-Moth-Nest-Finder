@@ -25,11 +25,15 @@
 		</div>
 		
 		<div id= "eggFilter">
-			<button onclick="loadMothPins('all')" style = "background-color: lightgrey">All</button>
-			<button onclick="loadMothPins('severe')" style= "background-color: lightsalmon">Severe</button>
-			<button onclick="loadMothPins('moderate')" style= "background-color: khaki">Moderate</button>
-			<button onclick="loadMothPins('low')" style= "background-color: lightgreen">Low</button>
-			<button onclick="loadMothPins('userReported')" style= "background-color: lightSkyBlue">User Reported</button>
+			<button title="All Nests" onclick="loadMothPins('all')" style = "background-color: lightgrey">All</button>
+			
+			<button title="Greater Than 10000 Eggs/HA" onclick="loadMothPins('severe')" style="background-color: lightsalmon">Severe</button>
+			
+			<button title="Between 1000 and 10000 Eggs/HA" onclick="loadMothPins('moderate')" style="background-color: khaki">Moderate</button>
+			
+			<button title="Less Than 1000 Eggs/HA" onclick="loadMothPins('low')" style="background-color: lightgreen">Low</button>
+			
+			<button title="User Reported Nests" onclick="loadMothPins('userReported')" style= "background-color: lightSkyBlue">User Reported</button>
 		</div>
 		
 		<div id= "mothMap">

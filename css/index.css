@@ -34,3 +34,6 @@ body{
 	text-align: center;
 }
 
+.MicrosoftMap .Infobox{
+	width: 200px;
+}
